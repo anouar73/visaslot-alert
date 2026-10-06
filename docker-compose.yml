@@ -1,0 +1,11 @@
+services:
+  visaslot:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - visaslot_data:/data
+volumes:
+  visaslot_data:

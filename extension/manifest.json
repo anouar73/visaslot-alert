@@ -1,0 +1,10 @@
+{
+  "manifest_version":3,
+  "name":"VisaSlot Detector",
+  "version":"1.0.0",
+  "description":"Détecte localement une disponibilité visible et la transmet à VisaSlot Alert.",
+  "permissions":["storage"],
+  "host_permissions":["https://*.tlscontact.com/*","https://visas-fr.tlscontact.com/*","http://localhost:8000/*","https://YOUR-DOMAIN.example/*"],
+  "options_page":"options.html",
+  "content_scripts":[{"matches":["https://*.tlscontact.com/*","https://visas-fr.tlscontact.com/*"],"js":["content.js"],"run_at":"document_idle"}]
+}
